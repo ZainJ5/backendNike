@@ -13,7 +13,8 @@ router.get('/', function(req, res, next) {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const uploadPath = path.join(__dirname, '..', 'public', 'images')
+    const uploadPath = path.join(__dirname, 'public', 'images')
+    console.log('Upload path:', uploadPath);
     cb(null, uploadPath)
   },
   filename: function (req, file, cb) {
