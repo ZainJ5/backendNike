@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "bin/www",
+      "src": "src/main.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "bin/www",
+      "dest": "src/main.ts",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Origin": "*",
